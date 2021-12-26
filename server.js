@@ -1,6 +1,6 @@
 const express = require("express");
 const path = require("path");
-const port = 5500;
+const port = process.env.PORT || 5500;
 const app = express();
 const server = require("http").createServer(app);
 
