@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SameClip | Home</title>
+
+    <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <header>
+            <a href="/">
+                <h1>SameClip</h1>
+            </a>
+        </header>
+
+        <main>
+            <h2>Choose sharing method: </h2>
+            <br>
+            <div class="content">
+                <div class="link-div instant-share-page-link-div">
+                    <a href="/instant-share/file-share.html" class="instant-share-page-link btn">Instant Share</a>
+                </div>
+
+                <div class="link-div clip-share-page-link-div">
+                    <a href="/clip-share/" class="clip-share-page-link btn">Clip Share</a>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>© <span id="year"></span> SameClip | All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script>
+        document.querySelector('#year').innerHTML = new Date().getFullYear();
+    </script>
+
+    <script src="/assets/js/index.js"></script>
+
+</body>
+
+</html>

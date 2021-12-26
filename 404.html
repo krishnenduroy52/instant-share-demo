@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Not Found</title>
+</head>
+<style>
+    /* Global Styles */
+
+    *,
+    *::before,
+    *::after {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        list-style: none;
+        text-decoration: none;
+        -webkit-tap-highlight-color: transparent;
+    }
+
+    /* text selection color */
+    ::-moz-selection {
+        background: rgba(64, 64, 64, 0.75);
+        color: #fff;
+    }
+
+    ::selection {
+        background: rgba(64, 64, 64, 0.75);
+        color: #fff;
+    }
+
+    /* scroll bar customization */
+
+    /* Firefox */
+    * {
+        scrollbar-width: auto;
+        scrollbar-color: #404040 #888;
+    }
+
+    /* Works on Chrome, Edge, and Safari */
+    *::-webkit-scrollbar {
+        width: auto;
+    }
+
+    *::-webkit-scrollbar-track {
+        background: #888;
+    }
+
+    *::-webkit-scrollbar-thumb {
+        background-color: #404040;
+    }
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+    body {
+        font-family: sans-serif;
+        background-color: #1f1f1f;
+        color: #888;
+    }
+
+    main {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin-top: auto;
+        margin-bottom: auto;
+        min-height: 100vh;
+    }
+
+    .page-not-found {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .visual-div {
+        display: flex;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .info-div {
+        display: flex;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .four {
+        font-size: 24vw;
+        color: hsl(33, 100%, 70%);
+        padding: 1vw;
+    }
+
+    .zero {
+        font-size: 24vw;
+        color: hsl(33, 100%, 79%);
+        padding: 1vw;
+    }
+
+    .info-para {
+        font-size: 3vw;
+        padding: 1.5vw;
+        padding-top: 0.1vw;
+        margin-top: -1.5vw;
+        margin-bottom: 1.5vw;
+    }
+
+    .btn-div {
+        padding: 2vw;
+    }
+
+    .btn-div a {
+        font-size: 1vw;
+        background-color: rgba(255, 255, 255, 0.125);
+        color: #fff;
+        border: 0.2vw solid #fff;
+        border-radius: 2vw;
+        padding: 0.9vw 2.7vw;
+    }
+
+    .btn-div a:hover {
+        background-color: hsla(33, 61%, 50%, 0.125);
+        color: hsl(33, 100%, 70%);
+        border: 0.2vw solid rgb(255, 150, 150);
+    }
+
+    .btn-div a:active {
+        background-color: hsla(33, 61%, 50%, 0.125);
+        color: hsl(33, 100%, 70%);
+        border: 0.2vw solid hsl(33, 100%, 79%);
+    }
+
+    @media (max-width: 800px) {
+        .four {
+            font-size: 40vw;
+        }
+
+        .zero {
+            font-size: 40vw;
+        }
+
+        .info-para {
+            font-size: 5vw;
+            padding: 1.5vw;
+            padding-top: 0;
+            margin-top: -1.5vw;
+            margin-bottom: 1.5vw;
+        }
+
+        .btn-div {
+            margin-top: 2vw;
+            padding: 6vw;
+        }
+
+        .btn-div a {
+            font-size: 4vw;
+            border: 0.6vw solid #fff;
+            border-radius: 6vw;
+            padding: 2vw 6vw;
+        }
+
+        .btn-div a:hover {
+            border: 0.6vw solid hsl(33, 100%, 70%);
+        }
+
+        .btn-div a:active {
+            border: 0.6vw solid hsl(33, 100%, 70%);
+        }
+    }
+</style>
+
+<body>
+
+    <main>
+        <section class="page-not-found">
+            <div class="visual-div">
+                <p class="four">4</p>
+                <p class="zero">0</p>
+                <p class="four">4</p>
+            </div>
+            <div class="info-div">
+                <p class="info-para">- Page Not Found -</p>
+            </div>
+            <div class="btn-div">
+                <a href="/">Go To Home</a>
+            </div>
+        </section>
+    </main>
+
+</body>
+
+</html>

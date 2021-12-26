@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instant share | Receiver | SameClip</title>
+
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="/assets/css/instant-share.css">
+    <link rel="stylesheet" href="/assets/css/receive.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <header>
+            <h1>Instant Share</h1>
+            <a href="/">
+                <span>by <span class="instant-share-page-header">SameClip</span></span>
+            </a>
+        </header>
+
+        <main>
+            <h2 style="font-weight: 800;">Instantly share files with your friend</h2> 
+            <img src="/assets/img/sharing img.png" alt="" width="50%">
+            <br>
+            
+            <div class="createRoom active">
+                <div class="form-input">
+                    <label for="join-id" style="text-align:center; font-size: 20px;">Join ID</label>
+                    <input type="text" id="join-id" style="font-size: 16px; padding: 10px;" value="">
+                </div>
+                <div class="join-room" id="join">
+                    <button id="receive-btn">Connect</button>
+                </div>
+            </div>
+            <div class="screen fs-screen">
+                <div class="files-list">
+                    <div class="title">Shared files:</div>
+                    <div class="item">
+                        <div class="progress">0%</div>
+                        <div class="filename">Abc.txt</div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>© <span id="year"></span> SameClip | All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script>
+        document.querySelector('#year').innerHTML = new Date().getFullYear();
+    </script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/downloadjs/1.4.8/download.min.js" integrity="sha512-WiGQZv8WpmQVRUFXZywo7pHIO0G/o3RyiAJZj8YXNN4AV7ReR1RYWVmZJ6y3H06blPcjJmG/sBpOVZjTSFFlzQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script type="text/javascript" src="/socket.io/socket.io.js"></script>
+    
+    <script>
+        let senderID;
+        const socket = io();
+
+        function generateID(){
+            return `${Math.trunc(Math.random()*999)}-${Math.trunc(Math.random()*999)}-${Math.trunc(Math.random()*999)}`;  
+        }
+        document.getElementById("receive-btn").addEventListener("click", function(){
+
+            senderID = document.querySelector("#join-id").value;
+
+            if(senderID.length == 0){
+                return;
+            }     
+            let joinID = generateID();
+            socket.emit("reveiver-join", {
+                uid:joinID,
+                sender_uid:senderID
+            });
+
+            document.querySelector(".createRoom").classList.remove("active");
+            document.querySelector(".fs-screen").classList.add("active");
+
+        });
+        let fileShare = {};
+        socket.on("fs-meta", function(metadata){
+            fileShare.metadata = metadata;
+            fileShare.transmitted = 0;
+            fileShare.buffer = [];
+            let el = document.querySelector(".item");
+            el.innerHTML=`
+            <div class="progress">0%</div>
+            <div class="filename">${metadata.filename}</div>
+            `;
+            document.querySelector(".files-list").appendChild(el)
+
+            fileShare.progress_node = el.querySelector(".progress");
+
+            socket.emit("fs-start", {
+                uid:senderID
+            });
+        });
+
+        socket.on("fs-share", function(buffer){
+            fileShare.buffer.push(buffer);
+            fileShare.transmitted += buffer.byteLength;
+            fileShare.progress_node.innerHTML = Math.trunc(fileShare.transmitted / fileShare.metadata.total_buffer_size * 100) + "%";
+            if(fileShare.transmitted == fileShare.metadata.total_buffer_size){
+                download(new Blob(fileShare.buffer), fileShare.metadata.filename);
+                fileShare = {};
+            }else{
+                socket.emit("fs-start", {
+                    uid:senderID
+                });
+            }
+        })
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,78 @@
+#createroom-btn{
+    background-color: black;
+    padding: 20px;
+    border-radius: 36px;
+    transition: transform 250ms;
+}
+
+#createroom-btn:hover{
+    transform: translateY(-5px);
+    cursor: pointer;
+}
+
+#createroom-btn{
+    font-size: 20px;
+    color: white;
+}
+
+.create-room{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.form-input{
+    display: none;
+    flex-direction: column;
+    margin-top: 40px;
+}
+
+.form-input b{
+    text-align: center; 
+    font-size: 25px;
+}
+.file-input{
+    display: flex;
+    flex-direction: column;
+}
+
+.file-input label{
+    font-size: 25px;
+    
+}
+.form-input span{
+    font-size: 25px;
+    border: 1px solid #555;
+    background-color: white;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+.file-input input{
+    font-size: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15px;
+}
+
+
+.title, .item{
+    text-align: center;
+    margin-top: 20px;
+    font-size: 20px;
+    border: 2px solid;
+    border-radius: 35px;
+    font-weight: 700;
+    padding: 10px 10px;
+}
+.createRoom {
+    display: none;
+    flex-direction: column;
+}
+
+.screen{
+    display: none;
+    flex-direction: column;
+}
+.active{
+    display: flex;
+}

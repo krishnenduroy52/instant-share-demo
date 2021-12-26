@@ -1,0 +1,176 @@
+:root {
+  --theme-color: hsl(33, 100%, 60%);
+  --theme-color-2: hsl(211, 100%, 65%);
+}
+
+h1 {
+  color: white;
+}
+
+header span {
+  color: white;
+  font-weight: 3rem;
+  font-family: sans-serif;
+  font-weight: bold;
+}
+
+header .clip-share-page-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+  margin: 0 auto;
+  background-color: var(--theme-color);
+  color: white;
+  padding: 0.75rem;
+  font-size: 1.25rem;
+  font-weight: bold;
+  border-radius: 10px;
+  margin-top: 1rem;
+  border: 2px dotted white;
+}
+
+.select-file-div {
+  width: 15rem;
+  height: 15rem;
+  background-color: hsl(33, 100%, 80%);
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  border: 3px dotted black;
+  cursor: pointer;
+}
+
+.select-file-div p {
+  font-family: "Montserrat";
+  font-weight: 900;
+}
+
+.upload-btn-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
+.upload-btn {
+  padding: 0.75rem;
+  font-size: 1.75rem;
+  width: 15rem;
+  margin: 1rem auto;
+  margin-bottom: 2rem;
+  border: 2px solid black;
+  box-shadow: 1px 1px 10px 1px black;
+}
+
+.display-link-div {
+  background-color: hsl(33, 100%, 40%);
+  border-radius: 10px 0 0 10px;
+  font-family: sans-serif;
+  padding: 0.75rem;
+  margin: 1rem auto;
+  margin-bottom: 0;
+  margin-top: 0;
+  margin: 1rem auto;
+}
+
+.display-link-div span {
+  font-family: "Montserrat";
+  font-weight: 900;
+}
+
+.display-link-div p {
+  color: white;
+  text-align: center;
+}
+
+.display-link-div a {
+  color: yellow;
+  text-decoration: underline;
+}
+
+.count-display {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  font-weight: bold;
+  border-radius: 20px;
+  width: 6rem;
+  height: 4rem;
+  background-color: hsl(84, 100%, 35%);
+  color: white;
+  border: 2px solid grey;
+  margin-right: 1rem;
+}
+
+.change-upload-count-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1.5rem auto;
+}
+
+.change-count-btn-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.upload-count-up {
+  color: white;
+  font-weight: bold;
+  font-size: 1.5rem;
+  background-color: black;
+  padding: 0.75rem 1.25rem;
+  border-radius: 0 10px 10px 0;
+  cursor: pointer;
+  border: 2px solid grey;
+  border-left: none;
+  user-select: none;
+}
+
+.upload-count-down {
+  color: black;
+  font-weight: bold;
+  background-color: white;
+  font-size: 1.5rem;
+  padding: 0.75rem 1.25rem;
+  border-radius: 10px 0 0 10px;
+  cursor: pointer;
+  border: 2px solid grey;
+  border-right: none;
+  user-select: none;
+}
+
+.copy-link-div {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  cursor: pointer;
+}
+
+.copy-link {
+  background-color: black;
+  width: fit-content;
+  padding: 0.9rem;
+  border-radius: 0 10px 10px 0;
+  transition: 0.2s cubic-bezier(0.1, 0.1, 0.1, 1);
+  border: 2px solid black;
+}
+
+#copy-icon {
+  color: white;
+  width: 25px;
+  height: 25px;
+}
+
+.uploaded-file-link-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

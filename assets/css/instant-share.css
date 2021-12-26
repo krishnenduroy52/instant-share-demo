@@ -1,0 +1,112 @@
+:root {
+  --theme-color: hsl(211, 100%, 65%);
+  --theme-color-2: hsl(33, 100%, 60%);
+}
+
+h1 {
+  color: white;
+}
+
+header span {
+  color: white;
+  font-weight: 3rem;
+  font-family: sans-serif;
+  font-weight: bold;
+}
+
+header .instant-share-page-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+  margin: 0 auto;
+  background-color: var(--theme-color);
+  color: white;
+  padding: 0.75rem;
+  font-size: 1.25rem;
+  font-weight: bold;
+  border-radius: 10px;
+  margin-top: 1rem;
+  border: 2px dotted white;
+}
+
+.select-file-div {
+  width: 15rem;
+  height: 15rem;
+  background-color: hsl(211, 100%, 80%);
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 0 auto;
+  border: 3px dotted black;
+  cursor: pointer;
+}
+
+.select-file-div p {
+  font-family: "Montserrat";
+  font-weight: 900;
+}
+
+.upload-btn {
+  padding: 0.75rem;
+  font-size: 1.75rem;
+  width: 15rem;
+  margin: 1rem auto;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  border: 2px solid black;
+  box-shadow: 1px 1px 10px 1px black;
+}
+
+.display-link-div {
+  background-color: hsl(211, 100%, 40%);
+  border-radius: 10px 0 0 10px;
+  font-family: sans-serif;
+  padding: 0.75rem;
+  margin: 1rem auto;
+}
+
+.display-link-div span {
+  font-family: "Montserrat";
+  font-weight: 900;
+}
+
+.display-link-div p {
+  color: white;
+  text-align: center;
+}
+
+.display-link-div a {
+  color: yellow;
+  text-decoration: underline;
+}
+
+.copy-link-div {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  cursor: pointer;
+}
+
+.copy-link {
+  background-color: black;
+  width: fit-content;
+  padding: 0.9rem;
+  border-radius: 0 10px 10px 0;
+  transition: 0.2s cubic-bezier(0.1, 0.1, 0.1, 1);
+  border: 2px solid black;
+}
+
+#copy-icon {
+  color: white;
+  width: 25px;
+  height: 25px;
+}
+
+.uploaded-file-link-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

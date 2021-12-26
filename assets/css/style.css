@@ -1,0 +1,110 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap'); */
+
+/* Fonts */
+
+/* Montserrat */
+@font-face {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/montserrat/v18/JTUSjIg1_i6t8kCHKm459Wlhyw.woff2)
+    format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
+    U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: "Montserrat 500";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/montserrat/v18/JTURjIg1_i6t8kCHKm45_ZpC3gnD_g.woff2)
+    format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
+    U+FEFF, U+FFFD;
+}
+
+:root {
+  --theme-color: hsl(33, 100%, 60%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  background-color: #eee;
+  background-color: #888;
+  color: black;
+  margin: 0.5rem;
+}
+
+a {
+  text-decoration: none;
+  display: block;
+}
+
+h1 {
+  font-family: "Montserrat 500";
+  letter-spacing: 7px;
+  font-size: 3rem;
+  color: black;
+}
+
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: hsl(270, 70%, 40%);
+  color: black;
+  font-size: 2rem;
+  font-weight: bold;
+  background-color: var(--theme-color);
+  border-radius: 20px;
+  padding: 1rem;
+  margin: 1rem 0;
+  cursor: pointer;
+}
+
+.container {
+  background-color: beige;
+  max-width: 800px;
+  margin: 0 auto;
+  border-radius: 10px;
+}
+
+header {
+  text-align: center;
+  padding: 2rem 1rem;
+  background-color: var(--theme-color);
+  border-radius: 10px 10px 0 0;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 70vh;
+  padding: 2rem 0;
+}
+
+.instant-share-page-link-div .btn {
+  background-color: hsl(211, 100%, 65%);
+  color: white;
+}
+
+footer {
+  text-align: center;
+  font-family: "Montserrat 500";
+  background-color: var(--theme-color);
+  padding: 2rem 1rem;
+  font-size: 1.25rem;
+  border-radius: 0 0 10px 10px;
+}
