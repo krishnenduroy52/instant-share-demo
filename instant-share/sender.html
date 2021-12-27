@@ -50,6 +50,9 @@
                         <div class="filename">Loading...</div>
                     </div>
                 </div>
+                <div class="exit">
+                    <button onclick="exit_send()">Exit</button>
+                </div>
             </div>
         </main> 
 
@@ -64,12 +67,14 @@
     <script>
         // const create = document.getElementById("create-room");
         const join = document.getElementById("join-id");
-
-        // create.addEventListener("click", displayroomid);
-
         displayroomid = function() {
             join.style.display = "flex";
         }
+
+        function exit_send(){
+            location.reload();
+        }
+
     </script>
 
 <script src="/assets/js/index.js"></script>

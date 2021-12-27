@@ -44,6 +44,9 @@
                         <div class="filename">Abc.txt</div>
                     </div>
                 </div>
+                <div class="exit">
+                    <button onclick="exit_send()">Exit</button>
+                </div>
             </div>
         </main>
 
@@ -62,7 +65,9 @@
     <script>
         let senderID;
         const socket = io();
-
+        function exit_send(){
+            location.reload();
+        }
         function generateID(){
             return `${Math.trunc(Math.random()*999)}-${Math.trunc(Math.random()*999)}-${Math.trunc(Math.random()*999)}`;  
         }
