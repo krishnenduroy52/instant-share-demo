@@ -25,6 +25,11 @@ function exit_send() {
 
 socket.on("init", function (uid) {
     receiverID = uid;
+    Swal.fire(
+        'Successfully connected',
+        'Now share your files with your friends',
+        'success'
+    );
     document.querySelector(".createRoom").classList.remove("active");
     document.querySelector(".fs-screen").classList.add("active");
 });
