@@ -7,6 +7,9 @@ const server = require("http").createServer(app);
 const io = require("socket.io")(server);
 app.use(express.static(path.join(__dirname+'/')));
 
+app.use(function(req, res, next){
+    res.sendFile(__dirname+"/404.html");
+})
 var id = [];
 var recentId;
 io.on("connection", function(socket){
