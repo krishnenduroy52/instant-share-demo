@@ -93,6 +93,8 @@ main {
   flex-direction: column;
   min-height: 70vh;
   padding: 2rem 0;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .instant-share-page-link-div .btn {
@@ -107,4 +109,10 @@ footer {
   padding: 2rem 1rem;
   font-size: 1.25rem;
   border-radius: 0 0 10px 10px;
+}
+
+@media only screen and (max-width: 600px){
+  main{
+    width: 85%;
+  }
 }

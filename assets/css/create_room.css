@@ -94,3 +94,14 @@
 .active{
     display: flex;
 }
+
+
+@media only screen and (max-width: 600px){
+    .screen{
+      width: 85%;
+    }
+
+    h2{
+        font-size: 15px;
+    }
+}
