@@ -13,21 +13,23 @@ let senderID;
                 return;
             }     
             let joinID = generateID();
-            console.log(senderID);
             socket.emit("receiver-id-check", senderID)
             socket.emit("reveiver-join", {
                 uid:joinID,
                 sender_uid:senderID
             });
             // if(invalidEl != 1){
-                document.querySelector(".createRoom").classList.remove("active");
-                document.querySelector(".fs-screen").classList.add("active"); 
+                let create_room = document.querySelector(".createRoom");
+                let fs_screen =  document.querySelector(".fs-screen");
             // } 
             socket.on("invalid", (data) => {
                 if(data == 1){
                     alert("invalid id");
-                    location.reload();
                 }                
+                else{
+                    create_room.classList.remove("active");
+                    fs_screen.classList.add("active"); 
+                }
             });     
         });
 

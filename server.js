@@ -16,10 +16,11 @@ io.on("connection", function(socket){
         id.push(data.uid);
     });
     socket.on("receiver-id-check", ids =>{
+        let datavar = 0;
         if(!id.includes(ids)){
-            console.log("invalid id");
-            socket.emit("invalid", 1);
+            datavar = 1;
         }
+        socket.emit("invalid", datavar);
     });
     socket.on("reveiver-join", function(data){
         socket.join(data.uid);
