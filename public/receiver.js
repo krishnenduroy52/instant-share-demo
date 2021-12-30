@@ -24,9 +24,18 @@ let senderID;
             // } 
             socket.on("invalid", (data) => {
                 if(data == 1){
-                    alert("invalid id");
+                    Swal.fire(
+                        'Oops! Invalid Id',
+                        'Please check the Room ID again',
+                        'error'
+                    )
                 }                
                 else{
+                    Swal.fire(
+                        'Successfully connected',
+                        'Now share your files with your friends',
+                        'success'
+                    )
                     create_room.classList.remove("active");
                     fs_screen.classList.add("active"); 
                 }
