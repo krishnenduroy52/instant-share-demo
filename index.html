@@ -5,33 +5,59 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SameClip | Home</title>
+    <title>SameClip | Instant share</title>
 
-    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/instant-share.css">
+    <link rel="stylesheet" href="assets/css/create_room.css">
+
+    <style>
+        .sender-reciver{
+            display: flex;
+            flex-direction: row;
+            
+        }
+        .sender-reciver h2{
+            color: #ebebeb;
+            background-color: black;
+            margin: 10px 40px;
+            padding: 20px;
+            border-radius: 36px;
+            transition: transform 250ms;
+        }
+
+        .sender-reciver h2:hover{
+            transform: translateY(-5px);
+        }
+
+        @media only screen and (max-width: 600px){
+            .sender-reciver h2 {
+                font-size: 15px;
+                margin: 10px 10px;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
     <div class="container">
         <header>
+            <h1>Instant Share</h1>
             <a href="/">
-                <h1>SameClip</h1>
+                <span>by <span class="instant-share-page-header">SameClip</span></span>
             </a>
         </header>
 
         <main>
-            <h2>Choose sharing method: </h2>
+            <img src="assets/img/sharing img.png" alt="" width="50%">
+            <h2 style="font-weight: 800;">Instantly share files with your friend</h2>
             <br>
-            <div class="content">
-                <div class="link-div instant-share-page-link-div">
-                    <a href="/instant-share/file-share.html" class="instant-share-page-link btn">Instant Share</a>
-                </div>
-
-                <div class="link-div clip-share-page-link-div">
-                    <a href="/clip-share/" class="clip-share-page-link btn">Clip Share</a>
-                </div>
+            <div class="sender-reciver">
+                <a href="instant-share/sender.html"><h2>Send File</h2></a>
+                <a href="instant-share/receiver.html"><h2>Receive File</h2></a>
             </div>
-        </main>
+        </main> 
 
         <footer>
             <p>© <span id="year"></span> SameClip | All rights reserved.</p>
@@ -42,7 +68,7 @@
         document.querySelector('#year').innerHTML = new Date().getFullYear();
     </script>
 
-    <script src="/assets/js/index.js"></script>
+    <script src="assets/js/index.js"></script>
 
 </body>
 
