@@ -1,5 +1,6 @@
 #createroom-btn{
-    background-color: black;
+    /* background-color: black; */
+    background-color: #2a2a72;
     padding: 20px;
     border-radius: 36px;
     transition: transform 250ms;
@@ -20,7 +21,8 @@
     margin-top: 20px;
 }
 .exit button{
-    background-color: black;
+    /* background-color: black; */
+    background-color: #2a2a72;
     padding: 20px;
     border-radius: 36px;
     transition: transform 250ms;
@@ -97,10 +99,6 @@
 
 
 @media only screen and (max-width: 600px){
-    .screen{
-      width: 85%;
-    }
-
     h2{
         font-size: 15px;
     }

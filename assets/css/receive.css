@@ -4,11 +4,12 @@
 }
 
 #receive-btn{
-    background-color: black;
+    /* background-color: black; */
+    background-color: #2a2a72;
     padding: 20px;
     border-radius: 36px;
     transition: transform 250ms;
-    margin-left: 60px;
+    /* margin-left: 60px; */
     margin-top: 20px;
     font-size: 20px;
 }
@@ -27,7 +28,8 @@
     margin-top: 20px;
 }
 .exit button{
-    background-color: black;
+    /* background-color: black; */
+    background-color: #2a2a72;
     padding: 20px;
     border-radius: 36px;
     transition: transform 250ms;

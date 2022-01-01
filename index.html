@@ -19,7 +19,9 @@
         }
         .sender-reciver h2{
             color: #ebebeb;
-            background-color: black;
+            /* background-color: black; */
+            background-color: #2a2a72;
+            /* background-image: linear-gradient(315deg, #1c1ca9 0%, #009ffd 74%); */
             margin: 10px 40px;
             padding: 20px;
             border-radius: 36px;
@@ -43,15 +45,25 @@
 
     <div class="container">
         <header>
-            <h1>Instant Share</h1>
+            <h1>Instant Share</h1>           
             <a href="https://sameclip.ml/">
                 <span>by <span class="instant-share-page-header">SameClip</span></span>
             </a>
         </header>
 
         <main>
-            <img src="/assets/img/sharing img.png" alt="" width="50%">
-            <h2 style="font-weight: 800;">Instantly share files with your friend</h2>
+            <!-- animated text  -->
+            <div class="container">
+                <h2 class="title-inst">
+                  <span class="title-word title-word-1">Instantly</span>
+                  <span class="title-word title-word-2">Share</span>
+                  <span class="title-word title-word-3">Your</span>
+                  <span class="title-word title-word-4">Files</span>
+                </h2>
+            </div>
+            <!-- end animation -->
+            <img src="/assets/img/sharing img.png" alt="" width="70%">
+            <!-- <h2 style="font-weight: 800;">Instantly share files with your friend</h2> -->
             <br>
             <div class="sender-reciver">
                 <a href="/instant-share/sender.html"><h2>Send File</h2></a>
