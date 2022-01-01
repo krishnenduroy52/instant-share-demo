@@ -96,10 +96,3 @@
 .active{
     display: flex;
 }
-
-
-@media only screen and (max-width: 600px){
-    h2{
-        font-size: 15px;
-    }
-}
