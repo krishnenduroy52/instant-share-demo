@@ -2,7 +2,10 @@
 let receiverID;
 const socket = io();
 function generateID() {
-    return `${Math.trunc(Math.random() * 999)}-${Math.trunc(Math.random() * 999)}-${Math.trunc(Math.random() * 999)}`;
+    // return `${Math.trunc(Math.random() * 999)}-${Math.trunc(Math.random() * 999)}-${Math.trunc(Math.random() * 999)}`;
+    let alphabet = '0123456789abcdefghijklmnopqrstuvwxyz';
+    nanoid = customAlphabet(alphabet, 6);
+    return nanoid();
 }
 document.getElementById("createroom-btn").addEventListener("click", function () {
     let joinID = generateID();
