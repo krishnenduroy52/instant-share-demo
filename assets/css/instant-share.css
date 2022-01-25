@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
 :root {
   --theme-color: hsl(211, 100%, 65%);
   --theme-color-2: hsl(33, 100%, 60%);
@@ -162,8 +163,60 @@ header .instant-share-page-header {
   text-transform: uppercase;
 }
 
+/* Drag and Drop */
+
+
+.drag-area{
+  border: 2px dashed rgb(0, 0, 0);
+  background-color: var(--theme-color);
+  height: 500px;
+  width: 700px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.drag-area.active{
+  border: 2px solid #333;
+}
+.drag-area .icon{
+  font-size: 100px;
+  color: #333;
+}
+.drag-area header{
+  font-size: 30px;
+  font-weight: 500;
+  color: #fff;
+}
+.drag-area span{
+  font-size: 25px;
+  font-weight: 500;
+  color: #fff;
+  margin: 10px 0 15px 0;
+}
+.drag-area button{
+  padding: 10px 25px;
+  font-size: 20px;
+  font-weight: 500;
+  border: none;
+  outline: none;
+  background: #fff;
+  color: #5256ad;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.drag-area img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+
 @media only screen and (max-width: 600px){
   img{
     width: 80%;
   }
 }
+

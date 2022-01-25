@@ -36,6 +36,29 @@ socket.on("init", function (uid) {
     document.querySelector(".createRoom").classList.remove("active");
     document.querySelector(".fs-screen").classList.add("active");
 });
+const dropBox = document.querySelector(".drag-area");
+dropBox.addEventListener("drop", (e) => {
+    let file = e.dataTransfer.files[0];
+    if (!file) {
+        return;
+    }
+    let reader = new FileReader();
+    reader.onload = function (e) {
+        let buffer = new Uint8Array(reader.result);
+        let el = document.querySelector(".item");
+        el.innerHTML = `
+            <div class="progress">0%</div>
+            <div class="filename">${file.name}</div>
+            `;
+        document.querySelector(".files-list").appendChild(el);
+        shareFile({
+            filename: file.name,
+            total_buffer_size: buffer.length,
+            buffer_size: 1024 * 200
+        }, buffer, el.querySelector(".progress"));
+    }
+    reader.readAsArrayBuffer(file);
+});
 document.querySelector("#file-input").addEventListener("change", function (e) {
     let file = e.target.files[0];
     if (!file) {
